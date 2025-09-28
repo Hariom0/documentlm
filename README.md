@@ -1,5 +1,5 @@
 This is a [Dummy DocumentLm for Reference](https://www.figma.com/make/gAcdkAosfr9EhuUGpeCKWk/Web-App-with-Summary-Generator?fullscreen=1) 
-## We'll try to recreate this minimal Ui and with out own ideas.. 
+## We'll try to recreate this minimal Ui and with our own ideas.. 
 ## Getting Started
 
 First, run the development server:
