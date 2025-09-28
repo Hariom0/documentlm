@@ -1,5 +1,5 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+This is a [Dummy DocumentLm for Reference](https://www.figma.com/make/gAcdkAosfr9EhuUGpeCKWk/Web-App-with-Summary-Generator?fullscreen=1) 
+## We'll try to recreate this minimal Ui and with out own ideas.. 
 ## Getting Started
 
 First, run the development server:
