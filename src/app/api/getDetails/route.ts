@@ -3,12 +3,40 @@ import { writeFile, mkdir } from "fs/promises";
 import path from "path";
 import fs, { readdir } from "fs";
 import { extractDoc, extractPdf } from "@/utils/helper";
+import { GlobalWorkerOptions } from "pdfjs-dist";
+GlobalWorkerOptions.workerSrc = "/path/to/pdf.worker.min.js";
 export const config = {
 	api: {
 		bodyParser: false,
 	},
 };
 
+export async function extractUploads(uploadDir: string) {
+	try {
+		const files: any = await fs.readdir(uploadDir, () => {});
+		let uploadedText = "";
+
+		for (const file of files) {
+			const extName = path.extname(file).toLowerCase();
+			const filePath = path.join(uploadDir, file);
+
+			if (extName === ".pdf") {
+				uploadedText += await extractPdf(filePath);
+			} else if (extName === ".docx" || extName === ".doc") {
+				uploadedText += await extractDoc(filePath);
+			}
+		}
+
+		console.log("All extracted text:", uploadedText);
+		return uploadedText;
+	} catch (error: any) {
+		console.error("Error extracting text:", error);
+		return {
+			error: "Error while extracting text",
+			details: error.message,
+		};
+	}
+}
 export async function POST(req: NextRequest) {
 	try {
 		// Extract form data
@@ -37,27 +65,7 @@ export async function POST(req: NextRequest) {
 		}
 
 		// Extract file path from upload dir
-		let uploadedText: any;
-		// Extract text from all files
-		try {
-			fs.readdir(uploadDir, (err, files) => {
-				if (err) return console.log(err);
-				if (files) {
-					files.map((file: string) => {
-						let extName = path.extname(file);
-						if (extName == ".pdf") {
-							uploadedText = extractPdf(file);
-						} else if (extName == ".docx" || ".doc") {
-							uploadedText = extractDoc(file);
-						}
-					});
-				}
-			});
-		} catch (error) {
-			console.log("Error Extracing text : ", error);
-			return NextResponse.json({ error: "Error while extracing text", details: error }, { status: 500 });
-		}
-
+		let uploadedText = await extractPdf(uploadDir);
 		return NextResponse.json(
 			{
 				msg: "Files uploaded successfully",

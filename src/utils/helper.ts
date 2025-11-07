@@ -66,17 +66,17 @@ export type SummaryResult = {
 //     return parsed;
 // }
 
-export async function extractPdf(filePath: string) {
+export async function extractPdf(filePath : string) {
 	const parser = new PDFParse({ url: filePath });
 	const result = await parser.getText();
-	return cleanText(String(result))
+	const checkedText = typeof result === "string" ? result : result.text;
+	return (cleanText(checkedText))
 }
 
 export async function extractDoc(filePath: string) {
 	const extractor = new wordExtractor();
 	const ex = await extractor.extract(filePath);
-	return cleanText(String(ex.getBody()))
-
+	return cleanText((ex.getBody()).toString())
 }
 
 export function cleanText(rawText: string) {
