@@ -1,70 +1,73 @@
 import cohere from "@/config/cohereConfig";
 import { PDFParse } from "pdf-parse";
 import wordExtractor from "word-extractor";
+import path from "path";
+import { readdir, unlink } from "fs/promises";
 
-type McqItem = {
-	question: string;
-	options: string[];
-	correctAnswer: string;
-	reference?: string;
+
+export type McqItem = {
+  question: string;
+  options: string[];
+  correctAnswer: string;
+  reference?: string;
 };
 
 export type SummaryResult = {
-	summary: string;
-	mcqs: McqItem[];
+  summary: string;
+  mcqs: McqItem[];
 };
 
-// export async function getSummary(inputData: string): Promise<SummaryResult> {
-//     const response = await cohere.chat({
-//         messages: [
-//             {
-//                 role: "system",
-//                 content:
-//                     "You are an expert educator and exam-setter. Given some study notes, respond ONLY as valid JSON following the schema.",
-//             },
-//             {
-//                 role: "user",
-//                 content: inputData,
-//             },
-//         ],
-//         temperature: 0.3,
-//         model: "command-r-plus-08-2024",
-//         responseFormat: {
-//             type: "json_object",
-//             jsonSchema: {
-//                 type: "object",
-//                 properties: {
-//                     summary: { type: "string" },
-//                     mcqs: {
-//                         type: "array",
-//                         items: {
-//                             type: "object",
-//                             properties: {
-//                                 question: { type: "string" },
-//                                 options: { type: "array", items: { type: "string" } },
-//                                 correctAnswer: { type: "string" },
-//                                 reference: { type: "string" },
-//                             },
-//                             required: ["question", "options", "correctAnswer"],
-//                         },
-//                     },
-//                 },
-//                 required: ["summary", "mcqs"],
-//             },
-//         },
-//     });
+export async function getSummary(inputData: string): Promise<SummaryResult> {
+  const response = await cohere.chat({
+    model: "command-r-plus-08-2024",
+    temperature: 0.3,
+    messages: [
+      {
+        role: "system",
+        content:
+          "You are an expert educator and exam-setter. Given some study notes, respond ONLY as valid JSON following this schema: { summary: string, mcqs: { question: string, options: string[], correctAnswer: string, reference?: string }[] }",
+      },
+      {
+        role: "user",
+        content: inputData,
+      },
+    ],
+    responseFormat: {
+      type: "json_object",
+      jsonSchema: {
+        type: "object",
+        properties: {
+          summary: { type: "string" },
+          mcqs: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                question: { type: "string" },
+                options: { type: "array", items: { type: "string" } },
+                correctAnswer: { type: "string" },
+                reference: { type: "string" },
+              },
+              required: ["question", "options", "correctAnswer"],
+            },
+          },
+        },
+        required: ["summary", "mcqs"],
+      },
+    },
+  });
 
-//     // With json_object response, cohere returns JSON string in message content
-//     const content = response?.message?.content?.[0]?.text ?? "";
-//     let parsed: SummaryResult;
-//     try {
-//         parsed = JSON.parse(content);
-//     } catch {
-//         // Fallback minimal shape
-//         parsed = { summary: content || "", mcqs: [] };
-//     }
-//     return parsed;
-// }
+  // Cohere returns JSON as a string in the message content
+  const content = response?.message?.content?.[0]?.text ?? "";
+  try {
+    const parsed = JSON.parse(content);
+    return parsed as SummaryResult;
+  } catch (err) {
+    console.error("Failed to parse Cohere response:", err, content);
+    return { summary: content || "", mcqs: [] };
+  }
+}
+
 
 export async function extractPdf(filePath : string) {
 	const parser = new PDFParse({ url: filePath });
@@ -76,7 +79,7 @@ export async function extractPdf(filePath : string) {
 export async function extractDoc(filePath: string) {
 	const extractor = new wordExtractor();
 	const ex = await extractor.extract(filePath);
-	return cleanText((ex.getBody()).toString())
+	return cleanText(ex.getBody())
 }
 
 export function cleanText(rawText: string) {
@@ -85,4 +88,23 @@ export function cleanText(rawText: string) {
     .replace(/[ \t]+/g, " ")
     .replace(/\n{2,}/g, "\n\n")
     .trim();
+}
+export async function extractUploads(uploadDir: string){
+		const files = await readdir(uploadDir);
+		let uploadedText = "";
+
+		for (const file of files) {
+			const extName = path.extname(file).toLowerCase();
+			const filePath = path.join(uploadDir, file);
+
+			if (extName === ".pdf") {
+				uploadedText += await extractPdf(filePath);
+				await unlink(filePath)
+			} else if (extName === ".docx" || extName === ".doc") {
+				uploadedText += await extractDoc(filePath);
+				await unlink(filePath)
+			}
+		}
+
+		return uploadedText;
 }

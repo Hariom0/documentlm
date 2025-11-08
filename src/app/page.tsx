@@ -1,63 +1,111 @@
 "use client";
+import React, { useState } from "react";
 
-import { useState } from "react";
-
-export default function Home() {
-  const [file, setFile] = useState<File | null>(null);
+export default function HomePage() {
+  const [files, setFiles] = useState<File[]>([]);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
 
-  async function handleSubmit(e: React.FormEvent) {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setFiles(Array.from(e.target.files));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null);
-    setResult(null);
-    if (!file) {
-      setError("Please select a file");
+    if (files.length === 0) {
+      setError("Please select at least one file.");
       return;
     }
-    const fd = new FormData();
-    fd.append("file", file);
+
+    setError(null);
     setLoading(true);
+    setResult(null);
+
+    const formData = new FormData();
+    files.forEach((file) => formData.append("files", file));
+
     try {
-      const res = await fetch("/api/getDetails", { method: "POST", body: fd });
+      const res = await fetch("/api/getDetails", {
+        method: "POST",
+        body: formData,
+      });
+
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || "Upload failed");
-      setResult(data);
+      if (!res.ok) throw new Error(data.error || "Something went wrong");
+
+      setResult(data.outputJson);
     } catch (err: any) {
-      setError(err?.message || "Something went wrong");
+      setError(err.message);
     } finally {
       setLoading(false);
     }
-  }
-
+  };
+  console.log(result)
   return (
-    <main className="p-6 max-w-2xl mx-auto space-y-4">
-      <h1 className="text-xl font-semibold">DocumentLm</h1>
-      <form onSubmit={handleSubmit} className="space-y-3">
+    <main className="min-h-screen bg-gray-50 flex flex-col items-center py-10 px-4">
+      <h1 className="text-3xl font-bold mb-6">📘 Study Notes Summarizer</h1>
+
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white shadow-md rounded-2xl p-6 w-full max-w-md flex flex-col items-center gap-4"
+      >
         <input
           type="file"
-          onChange={(e) => setFile(e.target.files?.[0] || null)}
-          className="block"
+          multiple
+          onChange={handleFileChange}
+          className="border border-gray-300 p-2 rounded w-full"
         />
+
         <button
           type="submit"
           disabled={loading}
-          className="px-3 py-2 rounded bg-black text-white disabled:opacity-50"
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
         >
-          {loading ? "Processing..." : "Upload & Summarize"}
+          {loading ? "Processing..." : "Upload & Generate Summary"}
         </button>
+
+        {error && <p className="text-red-500 text-sm">{error}</p>}
       </form>
 
-      {error && <p className="text-red-600">{error}</p>}
-
       {result && (
-        <section className="space-y-2">
-          <h2 className="text-lg font-medium">Result</h2>
-          <pre className="whitespace-pre-wrap text-sm bg-gray-100 p-3 rounded">
-{JSON.stringify({ summary: result.summary, mcqs: result.mcqs }, null, 2)}
-          </pre>
-        </section>
+        <div className="mt-10 bg-white shadow-md rounded-2xl p-6 w-full max-w-3xl">
+          <h2 className="text-2xl font-semibold mb-3">🧾 Summary</h2>
+          <p className="text-gray-700 mb-6 whitespace-pre-wrap">{result.summary}</p>
+
+          <h3 className="text-xl font-semibold mb-3">🧠 Generated MCQs</h3>
+          <div className="space-y-4">
+            {result.mcqs.length > 0 ? (
+              result.mcqs.map((mcq: any, idx: number) => (
+                <div
+                  key={idx}
+                  className="border border-gray-200 p-4 rounded-lg bg-gray-50"
+                >
+                  <p className="font-medium mb-2">
+                    {idx + 1}. {mcq.question}
+                  </p>
+                  <ul className="ml-5 list-disc">
+                    {mcq.options.map((opt: string, i: number) => (
+                      <li key={i}>{opt}</li>
+                    ))}
+                  </ul>
+                  <p className="mt-2 text-green-700 font-semibold">
+                    ✅ Correct: {mcq.correctAnswer}
+                  </p>
+                  {mcq.reference && (
+                    <p className="text-sm text-gray-500">
+                      📚 Reference: {mcq.reference}
+                    </p>
+                  )}
+                </div>
+              ))
+            ) : (
+              <p className="text-gray-500">No MCQs generated.</p>
+            )}
+          </div>
+        </div>
       )}
     </main>
   );
