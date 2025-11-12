@@ -1,9 +1,8 @@
-import cohere from "@/config/cohereConfig";
+import cohere from "@/app/config/cohereConfig";
 import { PDFParse } from "pdf-parse";
 import wordExtractor from "word-extractor";
 import path from "path";
 import { readdir, unlink } from "fs/promises";
-
 
 export type McqItem = {
   question: string;
@@ -58,7 +57,17 @@ export async function getSummary(inputData: string): Promise<SummaryResult> {
   });
 
   // Cohere returns JSON as a string in the message content
+ /*
+ EARLIER USED, GIVES AN ERROR-- CHANGED TO extract text from message content
   const content = response?.message?.content?.[0]?.text ?? "";
+*/
+
+  const content =
+    response?.message?.content
+      ?.filter((c: any) => c.type === "text")
+      ?.map((c: any) => c.text)
+      ?.join(" ") ?? "";
+
   try {
     const parsed = JSON.parse(content);
     return parsed as SummaryResult;
