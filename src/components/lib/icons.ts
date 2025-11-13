@@ -1,6 +1,7 @@
 //import icons from lucide-react
 import {
   ArrowRight,
+  ArrowLeft,
   BookOpen,
   Brain,
   Download,
@@ -11,6 +12,7 @@ import {
 
 export {
   ArrowRight,
+  ArrowLeft,
   BookOpen,
   Brain,
   Download,

@@ -109,7 +109,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
     }, [uploadedFiles]);
 
     return (
-            <div className="w-[70vw] max-w-3xl mx-auto bg-gradient-to-b from-blue-100 to-blue-200 border border-blue-200/50 p-6 rounded-xl h-fit shadow-lg">
+            <div className="w-[70vw] max-w-3xl mx-auto bg-gradient-to-b from-blue-100/60 to-blue-200 border border-blue-200/50 p-6 rounded-xl h-fit shadow-lg">
                 <div className="mb-4 ">
                     <div className="flex items-center gap-2 mb-2">
                         <svg className="w-5 h-5 text-indigo-700" fill="currentColor" viewBox="0 0 20 20">
@@ -127,7 +127,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
                     onDrop={handleDrop}
                     className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors `}
                 >
-                    <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                    <Upload className="w-12 h-12 text-gray-500/80 mx-auto mb-4" />
                     <p className="text-gray-700 font-medium mb-2">Drop your files here or click to browse</p>
                     <p className="text-sm text-gray-500 mb-6">Supports PDF, TXT files up to 10MB</p>
                     <button

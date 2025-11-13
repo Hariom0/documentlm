@@ -4,6 +4,7 @@ import FileUpload from "@/components/ui/FileUpload";
 import Textarea from "@/components/ui/Textarea";
 import { useRouter } from "next/navigation";
 import { FileText } from "lucide-react";
+import Header from "@/components/layout/Header";
 
 const Dashboard = () => {
   const router = useRouter();
@@ -66,7 +67,8 @@ const Dashboard = () => {
 
   return (
     <div className="container min-h-screen w-full bg-gray-50">
-      <div className="flex flex-col lg:flex-row mt-10 m-4 p-6 gap-6">
+      <Header title="DocumentLM Dashboard" showBackButton />
+      <div className="flex flex-col lg:flex-row mx-4 my-2 p-6 gap-6">
         {/* Main Content */}
         <div className="flex flex-col m-2 p-10 gap-10 mx-auto w-full max-w-4xl">
           {/* Header Section */}

@@ -15,7 +15,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
       : baseClasses
 
     return (
-      <div className="w-full bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl border border-blue-200/50 shadow-lg p-6 ">
+      <div className="w-full bg-gradient-to-br from-blue-100/70 to-blue-200 rounded-xl border border-blue-200/50 shadow-lg p-6 ">
         {/* Header */}
         <div className="mb-4">
           <div className="flex items-center gap-2 mb-2">

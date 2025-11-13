@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-blue-800 m-2">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-br from-blue-900/90 to-blue-600/90 m-2">
                 <Sparkles className="w-5 h-5 text-white " />
               </div>
               <span className="text-xl font-bold text-stone-700">DocumentLM</span>
