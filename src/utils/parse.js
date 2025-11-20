@@ -15,4 +15,4 @@ export function cleanText(rawText) {
     .trim();
 }
 
-extractPdf("/home/yondu/Desktop/documentlm/public/uploads/1762524542811-Get_Started_With_Smallpdf.pdf")
+extractPdf("r8iUYjI5F1yhkmjhRuUIA9ol1Pe0jlGtuxsnLDLI")
