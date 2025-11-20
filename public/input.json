@@ -1,0 +1,236 @@
+{
+  "summary": "This resume outlines the academic background, technical skills, and professional experience of Deep M. Mehta, a full-stack software developer with a strong focus on cloud computing and DevOps. With a Master's in Computer Science and a Bachelor's in Computer Engineering, Mehta has expertise in various programming languages, web/mobile development frameworks, and cloud platforms. Their work experience includes internships and full-time roles at major tech companies, showcasing skills in full-stack development, cloud infrastructure, and DevOps practices. Projects highlight innovative solutions in generative AI, cloud security, DevOps automation, and mobile app development, demonstrating a broad range of technical abilities and a commitment to staying at the forefront of the industry.",
+  "mcqs": [
+    {
+      "question": "Which of the following best describes the main focus of Deep M. Mehta's professional experience?",
+      "options": [
+        "Data Science and Machine Learning",
+        "Cloud Computing and DevOps",
+        "Embedded Systems and IoT",
+        "Cybersecurity and Ethical Hacking"
+      ],
+      "correctAnswer": "Cloud Computing and DevOps",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "What was the GPA achieved by Deep M. Mehta during their Master of Computer Science program?",
+      "options": [
+        "3.5/4.0",
+        "3.8/4.0",
+        "4.0/4.0",
+        "3.2/4.0"
+      ],
+      "correctAnswer": "4.0/4.0",
+      "reference": "Education section"
+    },
+    {
+      "question": "Which programming language is NOT mentioned in the 'Languages' section of the resume?",
+      "options": [
+        "C++",
+        "Java",
+        "Ruby",
+        "Python"
+      ],
+      "correctAnswer": "C++",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "Which cloud platform was used in the 'Technology Consultant' role at Microsoft?",
+      "options": [
+        "Google Cloud Platform",
+        "IBM Cloud",
+        "AWS",
+        "Azure"
+      ],
+      "correctAnswer": "Azure",
+      "reference": "Work Experience section"
+    },
+    {
+      "question": "Which of the following best describes the 'Azure Cloud Solution' project?",
+      "options": [
+        "A mobile app for secure password management",
+        "An AI-powered GitHub bot for CI/CD automation",
+        "A secure password management system using Azure's security features",
+        "A DevOps pipeline for Azure and GitHub integration"
+      ],
+      "correctAnswer": "A secure password management system using Azure's security features",
+      "reference": "Projects section"
+    },
+    {
+      "question": "Which programming language was used for the 'Software Development Engineer Intern' role at Amazon?",
+      "options": [
+        "Python",
+        "Java",
+        "C#",
+        "Ruby"
+      ],
+      "correctAnswer": "Java",
+      "reference": "Work Experience section"
+    },
+    {
+      "question": "What was the duration of Deep M. Mehta's internship at Amazon?",
+      "options": [
+        "May 2022 - August 2022",
+        "May 2023 - August 2023",
+        "May 2024 - August 2024",
+        "May 2021 - August 2021"
+      ],
+      "correctAnswer": "May 2023 - August 2023",
+      "reference": "Work Experience section"
+    },
+    {
+      "question": "Which of the following is NOT a skill or technology mentioned in the resume?",
+      "options": [
+        "Machine Learning",
+        "Kubernetes",
+        "Blockchain",
+        "DevOps"
+      ],
+      "correctAnswer": "Blockchain",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "Which project involved the use of Bluetooth technology?",
+      "options": [
+        "Azure Cloud Solution",
+        "DevOps IP solution",
+        "Generative AI GitHub bot",
+        "Oncue Android reminder app"
+      ],
+      "correctAnswer": "Oncue Android reminder app",
+      "reference": "Projects section"
+    },
+    {
+      "question": "What was the duration of the 'Technology Consultant' role at Microsoft?",
+      "options": [
+        "3 years",
+        "1 year",
+        "2 years",
+        "4 years"
+      ],
+      "correctAnswer": "3 years",
+      "reference": "Work Experience section"
+    },
+    {
+      "question": "Which of the following is a responsibility of Deep M. Mehta's current role at Microsoft?",
+      "options": [
+        "Developing mobile applications for iOS and Android",
+        "Designing and implementing cloud-based solutions",
+        "Researching and implementing machine learning algorithms",
+        "Leading a team of software engineers for a specific project"
+      ],
+      "correctAnswer": "Designing and implementing cloud-based solutions",
+      "reference": "AI-based expansion"
+    },
+    {
+      "question": "Which cloud service was used for the IoT platform in the 'Technology Consultant' role?",
+      "options": [
+        "Azure IoT Hub",
+        "AWS IoT Core",
+        "Google Cloud IoT",
+        "IBM Watson IoT"
+      ],
+      "correctAnswer": "Azure IoT Hub",
+      "reference": "Work Experience section"
+    },
+    {
+      "question": "Which of the following is NOT a cloud platform mentioned in the resume?",
+      "options": [
+        "Oracle Cloud",
+        "AWS",
+        "Google Cloud Platform",
+        "Azure"
+      ],
+      "correctAnswer": "Oracle Cloud",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "Which project involved the use of advanced Language Models (LLMs)?",
+      "options": [
+        "Azure Cloud Solution",
+        "DevOps IP solution",
+        "Generative AI GitHub bot",
+        "Mobile App"
+      ],
+      "correctAnswer": "Generative AI GitHub bot",
+      "reference": "Projects section"
+    },
+    {
+      "question": "What was the name of the mobile app developed by Deep M. Mehta that won an award?",
+      "options": [
+        "AzurePass",
+        "Oncue",
+        "CloudSecure",
+        "DevBot"
+      ],
+      "correctAnswer": "Oncue",
+      "reference": "Projects section"
+    },
+    {
+      "question": "Which of the following is a key achievement during the 'Technology Consultant' role?",
+      "options": [
+        "Reduced cloud infrastructure costs by 25% through optimization",
+        "Developed a highly secure cloud solution for a government agency",
+        "Implemented a successful DevOps pipeline for a large-scale project",
+        "Led a team for 18 months and received an award for outstanding performance"
+      ],
+      "correctAnswer": "Led a team for 18 months and received an award for outstanding performance",
+      "reference": "Work Experience section"
+    },
+    {
+      "question": "Which programming language is primarily used for Android app development?",
+      "options": [
+        "Java",
+        "Python",
+        "C#",
+        "Swift"
+      ],
+      "correctAnswer": "Java",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "Which of the following is a key responsibility of a full-stack software developer?",
+      "options": [
+        "Designing and implementing front-end user interfaces",
+        "Managing cloud infrastructure and security",
+        "Developing and maintaining both client-side and server-side code",
+        "Analyzing and optimizing database performance"
+      ],
+      "correctAnswer": "Developing and maintaining both client-side and server-side code",
+      "reference": "AI-based expansion"
+    },
+    {
+      "question": "Which cloud service is used for secure key management in Azure?",
+      "options": [
+        "Azure Key Management",
+        "Azure KeyVault",
+        "Azure Security Center",
+        "Azure AD"
+      ],
+      "correctAnswer": "Azure KeyVault",
+      "reference": "AI-based expansion"
+    },
+    {
+      "question": "Which project involved the use of Azure Functions?",
+      "options": [
+        "Azure Cloud Solution",
+        "DevOps IP solution",
+        "Generative AI GitHub bot",
+        "IoT platform for healthcare"
+      ],
+      "correctAnswer": "IoT platform for healthcare",
+      "reference": "Work Experience section"
+    },
+    {
+      "question": "What is the primary purpose of a DevOps pipeline?",
+      "options": [
+        "To manage cloud infrastructure",
+        "To automate the software development lifecycle",
+        "To secure data transmission over networks",
+        "To analyze and optimize database performance"
+      ],
+      "correctAnswer": "To automate the software development lifecycle",
+      "reference": "AI-based expansion"
+    }
+  ]
+}

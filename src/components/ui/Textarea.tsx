@@ -8,14 +8,14 @@ interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, characterCount = 0, maxCharacters = 10000, ...props }, ref) => {
-    const baseClasses = "min-h-[200px] w-full rounded-md border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600/50 focus:border-transparent focus:bg-white disabled:cursor-not-allowed disabled:opacity-50 resize-none transition-all"
+    const baseClasses = "min-h-[200px] max-w-3xl w-full rounded-md border border-slate-400/80 bg-white/30 px-4 py-3 text-sm text-gray-700 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600/50 focus:border-transparent focus:bg-white/80 disabled:cursor-not-allowed disabled:opacity-50 resize-none transition-all"
 
     const classes = className
       ? `${baseClasses} ${className}`
       : baseClasses
 
     return (
-      <div className="w-full bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl border border-blue-200/50 shadow-lg p-6 ">
+      <div className="w-full max-w-3xl bg-gradient-to-br from-blue-100/70 to-blue-200 rounded-xl border border-blue-200/50 shadow-lg p-6 mx-auto m-2">
         {/* Header */}
         <div className="mb-4">
           <div className="flex items-center gap-2 mb-2">

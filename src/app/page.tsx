@@ -1,28 +1,15 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/Card";
-import {
-  ArrowRight,
-  BookOpen,
-  Brain,
-  Download,
-  FileText,
-  Sparkles,
-  Upload,
-} from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/Card";
+import {ArrowRight, BookOpen, Brain, Download, FileText, Upload,} from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import AnimatedBackground from "@/components/ui/AnimatedBackground"
 
 export default function LandingPage() {
+  // for featured cards
   const features = [
     {
       icon: Upload,
@@ -56,24 +43,26 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-card to-background">
-      
+    <div className="min-h-screen">
+      <AnimatedBackground />
+      <Header title="DocumentLM" showDashboardButton />
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-100/50 to-blue-200/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 ">
         <div className="max-w-7xl mx-auto text-center ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
-            <div className="inline-block bg-blue-900/80 text-white text-sm font-semibold px-4 py-1 rounded-full m-2 shadow-md">
+            <div className="inline-block bg-gradient-to-r from-teal-600/80 to-blue-700/70 text-white text-sm font-semibold px-4 py-1 rounded-full m-2 shadow-md">
               AI-Powered Learning Assistant
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold p-5 mb-6">
               Transform Your Notes into
-              <span className="text-blue-700 block mt-2">
+              <span className="text-blue-800 block mt-2">
                 Smart Study Materials
               </span>
             </h1>
@@ -83,7 +72,7 @@ export default function LandingPage() {
               Perfect for students, educators, and lifelong learners.
             </p>
               <Link href="/dashboard">
-                <Button className="text-lg px-6 py-2 text-white bg-blue-800/90 rounded-lg shadow-md flex items-center justify-center mx-auto font-semibold cursor-pointer">
+                <Button className="text-lg px-6 py-2 text-white bg-gradient-to-br from-indigo-800/90 to-blue-600/90 rounded-lg shadow-md hover:shadow-lg flex items-center justify-center mx-auto font-semibold cursor-pointer hover:bg-blue-900 transition-colors duration-300 ease-in-out">
                   Start Creating
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -93,13 +82,13 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 border border-t border-stone-400">
+      <section className="py-20 px-4 sm:px-6 lg:px-8  border border-t border-stone-400">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              How DocumentLM Works
+              How DocumentLM Works?
             </h2>
-            <p className="text-lg text-muted text-stone-700 max-w-2xl mx-auto">
+            <p className="text-lg text-muted text-stone-700 max-w-2xl mx-auto my-6">
               Our simple 5-step process transforms your notes into powerful
               study materials
             </p>
@@ -110,18 +99,19 @@ export default function LandingPage() {
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
-                <Card className="h-full bg-gradient-to-br from-blue-100 to-blue-400/40 hover:shadow-lg transition-shadow duration-300 border-border/50 border-stone-300 shadow-md">
+                <Card className="h-full bg-gradient-to-br from-white/60 to-gray-300/60 shadow-sm hover:shadow-lg transition-shadow duration-300 border-border/50 border-stone-300 shadow-lg">
                   <CardHeader>
                     <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="w-10 h-10 bg-white/20 m-1 p-2 shadow-sm rounded-full" />
+                      <feature.icon className="w-12 h-10 bg-gray-300/60 m-1 p-2 shadow-md rounded-full" />
                     </div>
                     <CardTitle className="text-xl">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base leading-relaxed">
+                    <CardDescription className="text-gray-800 leading-relaxed">
                       {feature.description}
                     </CardDescription>
                   </CardContent>
@@ -133,7 +123,7 @@ export default function LandingPage() {
       </section>
 
       {/* Preview Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className=" py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-4">
@@ -147,11 +137,12 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
-              <Card className="p-6 border-border/40 border-stone-300 shadow-lg">
-                <h3 className="text-lg font-semibold mb-4 text-blue-700 px-2">
+              <Card className="p-6 border-border/40 border-stone-300 shadow-lg py-10">
+                <h3 className="text-lg font-semibold mb-6 text-blue-700 px-2">
                   Sample Summary
                 </h3>
                 <div className="space-y-3 text-sm text-muted-foreground">
@@ -174,8 +165,9 @@ export default function LandingPage() {
 
             <motion.div
               initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <Card className="p-6 border-border/50 border-stone-300">
                 <h3 className="text-lg font-semibold mb-4 text-blue-700 px-2">
@@ -191,7 +183,7 @@ export default function LandingPage() {
                       <span>A) Oxygen</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-4 h-4 rounded-full bg-blue-700/70 border-2 border-primary"></div>
+                      <div className="w-4 h-4 rounded-full bg-gradient-to-b from-blue-700/80 to-teal-600/70 border-2 border-primary "></div>
                       <span className="text-primary font-medium">
                         B) Carbon Dioxide <span className="text-blue-600 font-semibold">✓</span>
                       </span>
@@ -213,14 +205,15 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-100/50 to-blue-200/50 border border-t border-stone-400">
+      <section className="py-30 px-4 sm:px-6 lg:px-8 border border-t border-stone-400">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-balance mb-6 text-blue-800 mb-5">
               Ready to Transform Your Learning?
             </h2>
             <p className="text-lg text-muted text-stone-600 px-30 mb-8">
@@ -228,8 +221,8 @@ export default function LandingPage() {
               DocumentLM to enhance their learning experience.
             </p>
             <Link href="/dashboard">
-              <Button className="text-md px-6 py-2 text-white bg-blue-800/90 rounded-lg shadow-lg flex items-center justify-center mx-auto font-semibold cursor-pointer">
-                Get Started for Free!
+              <Button className="mt-8 text-md px-6 py-2 text-white bg-gradient-to-br from-indigo-800/90 to-blue-600/90 rounded-lg shadow-lg flex items-center justify-center mx-auto font-semibold cursor-pointer hover:bg-blue-900 transition-colors duration-300 ease-in-out">
+                Get Started!
                 <ArrowRight className="w-5 h-5 ml-3 " />
               </Button>
             </Link>
@@ -238,5 +231,6 @@ export default function LandingPage() {
       </section>
 
     </div>
+   
   );
 }
