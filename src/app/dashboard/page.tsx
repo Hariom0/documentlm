@@ -4,6 +4,7 @@ import { FileUpload } from "@/components/ui/FileUpload";
 import Textarea from "@/components/ui/Textarea";
 import { useRouter, useSearchParams } from "next/navigation";
 import Result from "@/components/ui/Result";
+import ProcessingStages from "@/components/ui/ProcessingStages";
 import { FileText, CheckCircle2, ExternalLink, XCircle, ChevronDown, ChevronUp, Upload, Type } from "lucide-react";
 import Header from "@/components/layout/Header";
 
@@ -17,6 +18,7 @@ const Dashboard = () => {
 	const [inputMode, setInputMode] = useState<InputMode>("files");
 	const [isInputSectionExpanded, setIsInputSectionExpanded] = useState(false);
 	const [loading, setLoading] = useState(false);
+	const [processedInfo, setProcessedInfo] = useState(false);
 	const [result, setResult] = useState<any>(null);
 	const [showResult, setShowResult] = useState(false);
 	const [error, setError] = useState<string | null>(null);
@@ -102,17 +104,14 @@ const Dashboard = () => {
 
 		setError(null);
 		setLoading(true);
+		setProcessedInfo(false); // Reset processing state
 		setResult(null);
-		setShowResult(true)
+		setShowResult(true);
 		setFormSuccess(null); // Clear previous form success
 		setIsInputSectionExpanded(false); // Auto-collapse input section after submission
-
-		const handleCloseResult = () => {
-    		setShowResult(false);
-	};
 		
 		const formData = new FormData();
-		formData.append("text",textInput)
+		formData.append("text", textInput);
 
 		// Append files if any
 		files.forEach((file) => formData.append("files", file));
@@ -141,10 +140,11 @@ const Dashboard = () => {
 			}
 
 			setResult(data.outputJson);
+			setProcessedInfo(true); // Mark processing as complete
 		} catch (err: any) {
 			setError(err.message || "An unexpected error occurred. Please try again.");
-		} finally {
 			setLoading(false);
+			setProcessedInfo(false);
 		}
 	};
 
@@ -154,22 +154,23 @@ const Dashboard = () => {
 
 	return (
 		<div className="container min-h-screen w-full bg-gray-50/80">
-			<Header title="DocumentLM Dashboard" showBackButton />
+			<Header title="DocumentLM" showBackButton />
 			<div className="flex flex-col lg:flex-row mt-10 m-4 p-6 gap-6">
 				{/* Main Content */}
 				<div className="flex flex-col m-2 p-10 gap-10 mx-auto w-full max-w-4xl">
 					{/* Header Section */}
 					<div className="flex flex-col gap-4 ">
-						<div className="flex gap-3 h-fit">
+						<div className="flex gap-3 h-fit mx-auto">
 							<FileText className="w-9 h-9 text-blue-800 ml-3" />
 							<h1 className="font-bold text-3xl text-gray-800">Study Notes Summarizer</h1>
 						</div>
 
-						<p className="text-gray-600 text-sm px-4">Upload your documents or paste text to generate summaries and MCQs</p>
+						<p className="text-gray-600 text-sm px-4 mx-auto pl-10">Upload your documents or paste text to generate summaries and MCQs</p>
 					</div>
 
 					{/* Navigation Tabs - Above Section */}
-					<div className="flex items-center gap-2 mb-4 bg-white rounded-xl p-1.5 shadow-sm border border-gray-200 w-fit">
+					<div className="flex items-center gap-2 mb-4 bg-white mx-auto w-full rounded-xl p-1.5 shadow-sm border border-gray-200 w-fit">
+					<div className="w-[50%] items-center justify-center flex">
 						<button
 							type="button"
 							onClick={() => {
@@ -177,13 +178,15 @@ const Dashboard = () => {
 								setIsInputSectionExpanded(true);
 							}}
 							disabled={loading}
-							className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
-								inputMode === "files" ? "bg-indigo-600 text-white shadow-md" : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+							className={`flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 w-[98%] hover:cursor-pointer ${
+								inputMode === "files" ? "bg-gradient-to-r from-blue-800/90 to-blue-700/80 text-white shadow-md" : "text-gray-600 hover:text-gray-900 hover:bg-gray-100 "
 							} disabled:opacity-50 disabled:cursor-not-allowed`}
 						>
 							<Upload className="w-4 h-4" />
 							Upload Files
 						</button>
+					</div>
+					<div className="w-[50%] items-center justify-center flex">
 						<button
 							type="button"
 							onClick={() => {
@@ -191,13 +194,15 @@ const Dashboard = () => {
 								setIsInputSectionExpanded(true);
 							}}
 							disabled={loading}
-							className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
-								inputMode === "text" ? "bg-indigo-600 text-white shadow-md" : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+							className={`flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 w-[98%] hover:cursor-pointer ${
+								inputMode === "text" ? "bg-gradient-to-r from-blue-800/90 to-blue-700/80 text-white shadow-md" : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
 							} disabled:opacity-50 disabled:cursor-not-allowed`}
 						>
 							<Type className="w-4 h-4" />
 							Paste Text
 						</button>
+					</div>
+						
 					</div>
 
 					{/* Collapsible Input Section */}
@@ -208,7 +213,7 @@ const Dashboard = () => {
 							className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							disabled={loading}
 						>
-							<div className="flex items-center gap-3">
+							<div className="flex items-center gap-3 py-1">
 								<div className={`w-10 h-10 rounded-lg flex items-center justify-center ${inputMode === "files" ? "bg-indigo-100" : "bg-blue-100"}`}>
 									{inputMode === "files" ? <Upload className="w-5 h-5 text-indigo-700" /> : <Type className="w-5 h-5 text-blue-700" />}
 								</div>
@@ -237,33 +242,31 @@ const Dashboard = () => {
 						</div>
 					</div>
 
-					{/* Submit Button */}
-					<button
-						onClick={handleSubmit}
-						disabled={loading || (files.length === 0 && !textInput.trim())}
-						className="bg-indigo-800 hover:bg-indigo-900 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full max-w-md mx-auto flex items-center justify-center gap-2"
-					>
-						{loading ? (
-							<>
-								<svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-									<circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-									<path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-								</svg>
-								Processing...
-							</>
-						) : (
-							<>
-								Generate Summary & MCQs
-								<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-									<path
-										fillRule="evenodd"
-										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
-										clipRule="evenodd"
-									/>
-								</svg>
-							</>
-						)}
-					</button>
+					{/* Submit Button / Processing Stages */}
+					{!loading ? (
+						<button
+							onClick={handleSubmit}
+							disabled={files.length === 0 && !textInput.trim()}
+							className="bg-indigo-800 hover:bg-indigo-900 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors w-full max-w-md mx-auto flex items-center justify-center gap-2"
+						>
+							Generate Summary & MCQs
+							<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+								<path
+									fillRule="evenodd"
+									d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+									clipRule="evenodd"
+								/>
+							</svg>
+						</button>
+					) : (
+						<ProcessingStages 
+							isComplete={processedInfo}
+							onCollapse={() => {
+								setLoading(false);
+								setProcessedInfo(false);
+							}} 
+						/>
+					)}
 
 					{/* Preview of result section on the dashboard */}
 					{result && !showResult && (
