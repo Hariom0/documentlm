@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import FileUpload from "@/components/ui/FileUpload";
+import { FileUpload } from "@/components/ui/FileUpload";
 import Textarea from "@/components/ui/Textarea";
 import { useRouter, useSearchParams } from "next/navigation";
 import Result from "@/components/ui/Result";

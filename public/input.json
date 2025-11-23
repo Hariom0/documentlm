@@ -1,236 +1,236 @@
 {
-  "summary": "This unit covers essential tools and practices for web programming, focusing on version control with Git, code editing, and web debugging. Git, a distributed version control system, is introduced with its features, commands, and workflow options. The comparison between Git and GitHub is discussed, highlighting the benefits of each. The study notes also cover code editors like VS Code, emphasizing features like syntax highlighting, code completion, and built-in debugging. Git cloning and command-line operations, including pull, push, stage, branch, and merge, are explained. Additionally, web debugging tools and browser developer tools are explored for identifying and fixing issues in web applications.",
+  "summary": "This resume outlines the academic background, technical skills, and professional experience of Deep M. Mehta, a full-stack software developer with a strong focus on cloud computing and DevOps. With a Master's in Computer Science and a Bachelor's in Computer Engineering, Mehta has expertise in various programming languages, web/mobile development frameworks, and cloud platforms. Their work experience includes internships and full-time roles at major tech companies, showcasing skills in full-stack development, cloud infrastructure, and DevOps practices. Projects highlight innovative solutions in generative AI, cloud security, DevOps automation, and mobile app development, demonstrating a broad range of technical abilities and a commitment to staying at the forefront of the industry.",
   "mcqs": [
     {
-      "question": "What is the primary purpose of Git?",
+      "question": "Which of the following best describes the main focus of Deep M. Mehta's professional experience?",
       "options": [
-        "A) Continuous integration and deployment",
-        "B) Version control and collaboration",
-        "C) Code editing and syntax highlighting",
-        "D) Web debugging and performance analysis"
+        "Data Science and Machine Learning",
+        "Cloud Computing and DevOps",
+        "Embedded Systems and IoT",
+        "Cybersecurity and Ethical Hacking"
       ],
-      "correctAnswer": "B",
-      "reference": "GIT, FEATURES AND COMMANDS section"
-    },
-    {
-      "question": "Which feature of Git ensures the integrity of commits?",
-      "options": [
-        "A) Open Source",
-        "B) Data Assurance",
-        "C) Security",
-        "D) Branching and Merging"
-      ],
-      "correctAnswer": "C",
-      "reference": "GIT, FEATURES AND COMMANDS section"
-    },
-    {
-      "question": "What command is used to initialize a new Git repository?",
-      "options": [
-        "A) git clone",
-        "B) git init",
-        "C) git add",
-        "D) git status"
-      ],
-      "correctAnswer": "B",
-      "reference": "GIT, FEATURES AND COMMANDS section"
-    },
-    {
-      "question": "In the comparison between Old Git and New Git, which statement is true?",
-      "options": [
-        "A) Old Git offers better performance for large repositories.",
-        "B) New Git provides enhanced command-line tools and GUIs.",
-        "C) Old Git has more lightweight branches.",
-        "D) Both A and C"
-      ],
-      "correctAnswer": "B",
-      "reference": "DIFFERENCE GIT VS GITHUB section"
-    },
-    {
-      "question": "Which Git workflow is suitable for small teams and involves a single central repository?",
-      "options": [
-        "A) Centralized Workflow",
-        "B) Feature Branch Workflow",
-        "C) Gitflow Workflow",
-        "D) Forking Workflow"
-      ],
-      "correctAnswer": "A",
-      "reference": "GIT WORKFLOW section"
-    },
-    {
-      "question": "What is the purpose of the 'git clone' command?",
-      "options": [
-        "A) To create a new repository",
-        "B) To copy a remote repository locally",
-        "C) To add changes to the staging area",
-        "D) To view the repository status"
-      ],
-      "correctAnswer": "B",
-      "reference": "CLONING section"
-    },
-    {
-      "question": "Which code editor is developed by Microsoft and supports multiple programming languages?",
-      "options": [
-        "A) Atom",
-        "B) Sublime Text",
-        "C) VS Code",
-        "D) Notepad"
-      ],
-      "correctAnswer": "C",
-      "reference": "CODE EDITOR section"
-    },
-    {
-      "question": "What is the role of the 'git stage' command?",
-      "options": [
-        "A) To create a new branch",
-        "B) To merge changes from another branch",
-        "C) To select changes for the next commit",
-        "D) To push changes to a remote repository"
-      ],
-      "correctAnswer": "C",
-      "reference": "COMMAND LINE, SHORT NOTE ON pull, push…. section"
-    },
-    {
-      "question": "Which web debugging tool is used to inspect and edit HTML/CSS in real time?",
-      "options": [
-        "A) Console",
-        "B) Network Tab",
-        "C) Browser Developer Tools",
-        "D) Redux DevTools"
-      ],
-      "correctAnswer": "C",
-      "reference": "WEB DEBUGGING TOOLS section"
-    },
-    {
-      "question": "What does the 'git push' command do?",
-      "options": [
-        "A) Fetches changes from the remote repository",
-        "B) Sends local changes to the remote repository",
-        "C) Creates a new branch",
-        "D) Merges changes from a feature branch"
-      ],
-      "correctAnswer": "B",
-      "reference": "COMMAND LINE, SHORT NOTE ON pull, push…. section"
-    },
-    {
-      "question": "Which feature of a code editor helps identify errors as you write code?",
-      "options": [
-        "A) Syntax highlighting",
-        "B) Code completion",
-        "C) Error highlighting",
-        "D) Built-in terminal"
-      ],
-      "correctAnswer": "C",
+      "correctAnswer": "Cloud Computing and DevOps",
       "reference": "AI-generated"
     },
     {
-      "question": "In the Gitflow Workflow, what are the main branches called?",
+      "question": "What was the GPA achieved by Deep M. Mehta during their Master of Computer Science program?",
       "options": [
-        "A) master and feature",
-        "B) main and develop",
-        "C) central and feature",
-        "D) main and release"
+        "3.5/4.0",
+        "3.8/4.0",
+        "4.0/4.0",
+        "3.2/4.0"
       ],
-      "correctAnswer": "B",
-      "reference": "GIT WORKFLOW section"
+      "correctAnswer": "4.0/4.0",
+      "reference": "Education section"
     },
     {
-      "question": "What is the purpose of the 'git pull' command?",
+      "question": "Which programming language is NOT mentioned in the 'Languages' section of the resume?",
       "options": [
-        "A) To create a new branch",
-        "B) To merge changes from a remote repository",
-        "C) Send changes to the remote repository",
-        "D) Stage changes for the next commit"
+        "C++",
+        "Java",
+        "Ruby",
+        "Python"
       ],
-      "correctAnswer": "B",
-      "reference": "COMMAND LINE, SHORT NOTE ON pull, push…. section"
+      "correctAnswer": "C++",
+      "reference": "AI-generated"
     },
     {
-      "question": "Which code editor feature provides suggestions for completing code?",
+      "question": "Which cloud platform was used in the 'Technology Consultant' role at Microsoft?",
       "options": [
-        "A) Syntax highlighting",
-        "B) Code completion",
-        "C) Error highlighting",
-        "D) Git integration"
+        "Google Cloud Platform",
+        "IBM Cloud",
+        "AWS",
+        "Azure"
       ],
-      "correctAnswer": "B",
-      "reference": "CODE EDITOR section"
+      "correctAnswer": "Azure",
+      "reference": "Work Experience section"
     },
     {
-      "question": "What is the benefit of using the Forking Workflow in open-source projects?",
+      "question": "Which of the following best describes the 'Azure Cloud Solution' project?",
       "options": [
-        "A) Centralized control over the codebase",
-        "B) Enhanced collaboration on a single repository",
-        "C) Developers can work on their own copy of the repository",
-        "D) Faster code review process"
+        "A mobile app for secure password management",
+        "An AI-powered GitHub bot for CI/CD automation",
+        "A secure password management system using Azure's security features",
+        "A DevOps pipeline for Azure and GitHub integration"
       ],
-      "correctAnswer": "C",
-      "reference": "GIT WORKFLOW section"
+      "correctAnswer": "A secure password management system using Azure's security features",
+      "reference": "Projects section"
     },
     {
-      "question": "Which Git command is used to view the status of the repository?",
+      "question": "Which programming language was used for the 'Software Development Engineer Intern' role at Amazon?",
       "options": [
-        "A) git status",
-        "B) git branch",
-        "C) git merge",
-        "D) git clone"
+        "Python",
+        "Java",
+        "C#",
+        "Ruby"
       ],
-      "correctAnswer": "A",
-      "reference": "GIT, FEATURES AND COMMANDS section"
+      "correctAnswer": "Java",
+      "reference": "Work Experience section"
     },
     {
-      "question": "What is the purpose of the 'git branch' command?",
+      "question": "What was the duration of Deep M. Mehta's internship at Amazon?",
       "options": [
-        "A) To create a new repository",
-        "B) To merge changes from another branch",
-        "C) Create a separate line of development",
-        "D) Push changes to a remote repository"
+        "May 2022 - August 2022",
+        "May 2023 - August 2023",
+        "May 2024 - August 2024",
+        "May 2021 - August 2021"
       ],
-      "correctAnswer": "C",
-      "reference": "COMMAND LINE, SHORT NOTE ON pull, push…. section"
+      "correctAnswer": "May 2023 - August 2023",
+      "reference": "Work Experience section"
     },
     {
-      "question": "Which code editor feature allows you to run code within the editor itself?",
+      "question": "Which of the following is NOT a skill or technology mentioned in the resume?",
       "options": [
-        "A) Syntax highlighting",
-        "B) Built-in terminal",
-        "C) Error highlighting",
-        "D) Git integration"
+        "Machine Learning",
+        "Kubernetes",
+        "Blockchain",
+        "DevOps"
       ],
-      "correctAnswer": "B",
-      "reference": "CODE EDITOR section"
+      "correctAnswer": "Blockchain",
+      "reference": "AI-generated"
     },
     {
-      "question": "What is the main difference between Git and GitHub?",
+      "question": "Which project involved the use of Bluetooth technology?",
       "options": [
-        "A) Git is a version control system, while GitHub is a code editor.",
-        "B) GitHub is a distributed system, while Git is centralized.",
-        "C) GitHub provides hosting for Git repositories.",
-        "D) Git is open-source, while GitHub is proprietary."
+        "Azure Cloud Solution",
+        "DevOps IP solution",
+        "Generative AI GitHub bot",
+        "Oncue Android reminder app"
       ],
-      "correctAnswer": "C",
-      "reference": "DIFFERENCE GIT VS GITHUB section"
+      "correctAnswer": "Oncue Android reminder app",
+      "reference": "Projects section"
     },
     {
-      "question": "Which Git command is used to add changes to the staging area?",
+      "question": "What was the duration of the 'Technology Consultant' role at Microsoft?",
       "options": [
-        "A) git commit",
-        "B) git add",
-        "C) git pull",
-        "D) git push"
+        "3 years",
+        "1 year",
+        "2 years",
+        "4 years"
       ],
-      "correctAnswer": "B",
-      "reference": "GIT, FEATURES AND COMMANDS section"
+      "correctAnswer": "3 years",
+      "reference": "Work Experience section"
     },
     {
-      "question": "What is the role of the 'git merge' command?",
+      "question": "Which of the following is a responsibility of Deep M. Mehta's current role at Microsoft?",
       "options": [
-        "A) To create a new repository",
-        "B) Merge changes from one branch to another",
-        "C) Push changes to a remote repository",
-        "D) View the repository status"
+        "Developing mobile applications for iOS and Android",
+        "Designing and implementing cloud-based solutions",
+        "Researching and implementing machine learning algorithms",
+        "Leading a team of software engineers for a specific project"
       ],
-      "correctAnswer": "B",
-      "reference": "COMMAND LINE, SHORT NOTE ON pull, push…. section"
+      "correctAnswer": "Designing and implementing cloud-based solutions",
+      "reference": "AI-based expansion"
+    },
+    {
+      "question": "Which cloud service was used for the IoT platform in the 'Technology Consultant' role?",
+      "options": [
+        "Azure IoT Hub",
+        "AWS IoT Core",
+        "Google Cloud IoT",
+        "IBM Watson IoT"
+      ],
+      "correctAnswer": "Azure IoT Hub",
+      "reference": "Work Experience section"
+    },
+    {
+      "question": "Which of the following is NOT a cloud platform mentioned in the resume?",
+      "options": [
+        "Oracle Cloud",
+        "AWS",
+        "Google Cloud Platform",
+        "Azure"
+      ],
+      "correctAnswer": "Oracle Cloud",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "Which project involved the use of advanced Language Models (LLMs)?",
+      "options": [
+        "Azure Cloud Solution",
+        "DevOps IP solution",
+        "Generative AI GitHub bot",
+        "Mobile App"
+      ],
+      "correctAnswer": "Generative AI GitHub bot",
+      "reference": "Projects section"
+    },
+    {
+      "question": "What was the name of the mobile app developed by Deep M. Mehta that won an award?",
+      "options": [
+        "AzurePass",
+        "Oncue",
+        "CloudSecure",
+        "DevBot"
+      ],
+      "correctAnswer": "Oncue",
+      "reference": "Projects section"
+    },
+    {
+      "question": "Which of the following is a key achievement during the 'Technology Consultant' role?",
+      "options": [
+        "Reduced cloud infrastructure costs by 25% through optimization",
+        "Developed a highly secure cloud solution for a government agency",
+        "Implemented a successful DevOps pipeline for a large-scale project",
+        "Led a team for 18 months and received an award for outstanding performance"
+      ],
+      "correctAnswer": "Led a team for 18 months and received an award for outstanding performance",
+      "reference": "Work Experience section"
+    },
+    {
+      "question": "Which programming language is primarily used for Android app development?",
+      "options": [
+        "Java",
+        "Python",
+        "C#",
+        "Swift"
+      ],
+      "correctAnswer": "Java",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "Which of the following is a key responsibility of a full-stack software developer?",
+      "options": [
+        "Designing and implementing front-end user interfaces",
+        "Managing cloud infrastructure and security",
+        "Developing and maintaining both client-side and server-side code",
+        "Analyzing and optimizing database performance"
+      ],
+      "correctAnswer": "Developing and maintaining both client-side and server-side code",
+      "reference": "AI-based expansion"
+    },
+    {
+      "question": "Which cloud service is used for secure key management in Azure?",
+      "options": [
+        "Azure Key Management",
+        "Azure KeyVault",
+        "Azure Security Center",
+        "Azure AD"
+      ],
+      "correctAnswer": "Azure KeyVault",
+      "reference": "AI-based expansion"
+    },
+    {
+      "question": "Which project involved the use of Azure Functions?",
+      "options": [
+        "Azure Cloud Solution",
+        "DevOps IP solution",
+        "Generative AI GitHub bot",
+        "IoT platform for healthcare"
+      ],
+      "correctAnswer": "IoT platform for healthcare",
+      "reference": "Work Experience section"
+    },
+    {
+      "question": "What is the primary purpose of a DevOps pipeline?",
+      "options": [
+        "To manage cloud infrastructure",
+        "To automate the software development lifecycle",
+        "To secure data transmission over networks",
+        "To analyze and optimize database performance"
+      ],
+      "correctAnswer": "To automate the software development lifecycle",
+      "reference": "AI-based expansion"
     }
   ]
 }

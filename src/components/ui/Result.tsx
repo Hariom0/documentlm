@@ -253,9 +253,7 @@ const Result: React.FC<ResultProps> = ({ result, onClose }) => {
               After authorization, your form will be created automatically.
             </p>
           </div>
-        </div>
-
-        
+        </div>   
       </div>
     </section>
   );
