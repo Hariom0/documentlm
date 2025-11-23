@@ -1,236 +1,236 @@
 {
-  "summary": "This resume outlines the academic background, technical skills, and professional experience of Deep M. Mehta, a full-stack software developer with a strong focus on cloud computing and DevOps. With a Master's in Computer Science and a Bachelor's in Computer Engineering, Mehta has expertise in various programming languages, web/mobile development frameworks, and cloud platforms. Their work experience includes internships and full-time roles at major tech companies, showcasing skills in full-stack development, cloud infrastructure, and DevOps practices. Projects highlight innovative solutions in generative AI, cloud security, DevOps automation, and mobile app development, demonstrating a broad range of technical abilities and a commitment to staying at the forefront of the industry.",
+  "summary": "Photosynthesis is a vital biological process enabling plants to harness sunlight and transform it into chemical energy. This intricate process takes place within the chloroplasts, specialized organelles in plant cells. The primary reactants are carbon dioxide and water, which are converted into glucose, a simple sugar, and oxygen. Glucose serves as a crucial energy source for plants, fueling their growth and metabolism, while oxygen is released into the atmosphere as a byproduct.",
   "mcqs": [
     {
-      "question": "Which of the following best describes the main focus of Deep M. Mehta's professional experience?",
+      "question": "What is the primary function of photosynthesis in plants?",
       "options": [
-        "Data Science and Machine Learning",
-        "Cloud Computing and DevOps",
-        "Embedded Systems and IoT",
-        "Cybersecurity and Ethical Hacking"
+        "Cellular respiration",
+        "Energy storage",
+        "Nutrient absorption",
+        "Light energy conversion"
       ],
-      "correctAnswer": "Cloud Computing and DevOps",
-      "reference": "AI-generated"
-    },
-    {
-      "question": "What was the GPA achieved by Deep M. Mehta during their Master of Computer Science program?",
-      "options": [
-        "3.5/4.0",
-        "3.8/4.0",
-        "4.0/4.0",
-        "3.2/4.0"
-      ],
-      "correctAnswer": "4.0/4.0",
-      "reference": "Education section"
-    },
-    {
-      "question": "Which programming language is NOT mentioned in the 'Languages' section of the resume?",
-      "options": [
-        "C++",
-        "Java",
-        "Ruby",
-        "Python"
-      ],
-      "correctAnswer": "C++",
-      "reference": "AI-generated"
-    },
-    {
-      "question": "Which cloud platform was used in the 'Technology Consultant' role at Microsoft?",
-      "options": [
-        "Google Cloud Platform",
-        "IBM Cloud",
-        "AWS",
-        "Azure"
-      ],
-      "correctAnswer": "Azure",
-      "reference": "Work Experience section"
-    },
-    {
-      "question": "Which of the following best describes the 'Azure Cloud Solution' project?",
-      "options": [
-        "A mobile app for secure password management",
-        "An AI-powered GitHub bot for CI/CD automation",
-        "A secure password management system using Azure's security features",
-        "A DevOps pipeline for Azure and GitHub integration"
-      ],
-      "correctAnswer": "A secure password management system using Azure's security features",
-      "reference": "Projects section"
-    },
-    {
-      "question": "Which programming language was used for the 'Software Development Engineer Intern' role at Amazon?",
-      "options": [
-        "Python",
-        "Java",
-        "C#",
-        "Ruby"
-      ],
-      "correctAnswer": "Java",
-      "reference": "Work Experience section"
-    },
-    {
-      "question": "What was the duration of Deep M. Mehta's internship at Amazon?",
-      "options": [
-        "May 2022 - August 2022",
-        "May 2023 - August 2023",
-        "May 2024 - August 2024",
-        "May 2021 - August 2021"
-      ],
-      "correctAnswer": "May 2023 - August 2023",
-      "reference": "Work Experience section"
-    },
-    {
-      "question": "Which of the following is NOT a skill or technology mentioned in the resume?",
-      "options": [
-        "Machine Learning",
-        "Kubernetes",
-        "Blockchain",
-        "DevOps"
-      ],
-      "correctAnswer": "Blockchain",
-      "reference": "AI-generated"
-    },
-    {
-      "question": "Which project involved the use of Bluetooth technology?",
-      "options": [
-        "Azure Cloud Solution",
-        "DevOps IP solution",
-        "Generative AI GitHub bot",
-        "Oncue Android reminder app"
-      ],
-      "correctAnswer": "Oncue Android reminder app",
-      "reference": "Projects section"
-    },
-    {
-      "question": "What was the duration of the 'Technology Consultant' role at Microsoft?",
-      "options": [
-        "3 years",
-        "1 year",
-        "2 years",
-        "4 years"
-      ],
-      "correctAnswer": "3 years",
-      "reference": "Work Experience section"
-    },
-    {
-      "question": "Which of the following is a responsibility of Deep M. Mehta's current role at Microsoft?",
-      "options": [
-        "Developing mobile applications for iOS and Android",
-        "Designing and implementing cloud-based solutions",
-        "Researching and implementing machine learning algorithms",
-        "Leading a team of software engineers for a specific project"
-      ],
-      "correctAnswer": "Designing and implementing cloud-based solutions",
+      "correctAnswer": "Light energy conversion",
       "reference": "AI-based expansion"
     },
     {
-      "question": "Which cloud service was used for the IoT platform in the 'Technology Consultant' role?",
+      "question": "Which organelles are responsible for photosynthesis?",
       "options": [
-        "Azure IoT Hub",
-        "AWS IoT Core",
-        "Google Cloud IoT",
-        "IBM Watson IoT"
+        "Mitochondria",
+        "Chloroplasts",
+        "Vacuoles",
+        "Nucleoli"
       ],
-      "correctAnswer": "Azure IoT Hub",
-      "reference": "Work Experience section"
+      "correctAnswer": "Chloroplasts",
+      "reference": "AI-based expansion"
     },
     {
-      "question": "Which of the following is NOT a cloud platform mentioned in the resume?",
+      "question": "What is the main product of photosynthesis?",
       "options": [
-        "Oracle Cloud",
-        "AWS",
-        "Google Cloud Platform",
-        "Azure"
+        "Oxygen",
+        "Glucose",
+        "Carbon dioxide",
+        "Water"
       ],
-      "correctAnswer": "Oracle Cloud",
+      "correctAnswer": "Glucose",
+      "reference": "Photosynthesis process"
+    },
+    {
+      "question": "Which of the following is NOT a reactant in photosynthesis?",
+      "options": [
+        "Carbon dioxide",
+        "Sunlight",
+        "Nitrogen",
+        "Water"
+      ],
+      "correctAnswer": "Nitrogen",
+      "reference": "AI-based expansion"
+    },
+    {
+      "question": "How do plants use the glucose produced during photosynthesis?",
+      "options": [
+        "For cellular respiration",
+        "As a structural component",
+        "To store energy for later use",
+        "In protein synthesis"
+      ],
+      "correctAnswer": "To store energy for later use",
+      "reference": "AI-based expansion"
+    },
+    {
+      "question": "Which pigment is essential for absorbing light energy during photosynthesis?",
+      "options": [
+        "Carotenoids",
+        "Chlorophyll",
+        "Xanthophylls",
+        "Phycobilins"
+      ],
+      "correctAnswer": "Chlorophyll",
       "reference": "AI-generated"
     },
     {
-      "question": "Which project involved the use of advanced Language Models (LLMs)?",
+      "question": "What is the role of the Calvin cycle in photosynthesis?",
       "options": [
-        "Azure Cloud Solution",
-        "DevOps IP solution",
-        "Generative AI GitHub bot",
-        "Mobile App"
+        "ATP synthesis",
+        "Carbon fixation",
+        "Electron transport",
+        "Photolysis of water"
       ],
-      "correctAnswer": "Generative AI GitHub bot",
-      "reference": "Projects section"
-    },
-    {
-      "question": "What was the name of the mobile app developed by Deep M. Mehta that won an award?",
-      "options": [
-        "AzurePass",
-        "Oncue",
-        "CloudSecure",
-        "DevBot"
-      ],
-      "correctAnswer": "Oncue",
-      "reference": "Projects section"
-    },
-    {
-      "question": "Which of the following is a key achievement during the 'Technology Consultant' role?",
-      "options": [
-        "Reduced cloud infrastructure costs by 25% through optimization",
-        "Developed a highly secure cloud solution for a government agency",
-        "Implemented a successful DevOps pipeline for a large-scale project",
-        "Led a team for 18 months and received an award for outstanding performance"
-      ],
-      "correctAnswer": "Led a team for 18 months and received an award for outstanding performance",
-      "reference": "Work Experience section"
-    },
-    {
-      "question": "Which programming language is primarily used for Android app development?",
-      "options": [
-        "Java",
-        "Python",
-        "C#",
-        "Swift"
-      ],
-      "correctAnswer": "Java",
+      "correctAnswer": "Carbon fixation",
       "reference": "AI-generated"
     },
     {
-      "question": "Which of the following is a key responsibility of a full-stack software developer?",
+      "question": "Which type of light is most effective for photosynthesis?",
       "options": [
-        "Designing and implementing front-end user interfaces",
-        "Managing cloud infrastructure and security",
-        "Developing and maintaining both client-side and server-side code",
-        "Analyzing and optimizing database performance"
+        "Infrared",
+        "Blue light",
+        "Green light",
+        "Ultraviolet"
       ],
-      "correctAnswer": "Developing and maintaining both client-side and server-side code",
+      "correctAnswer": "Blue light",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "How do plants adapt to varying light conditions?",
+      "options": [
+        "By changing the type of chlorophyll",
+        "Adjusting the number of chloroplasts",
+        "Producing different pigments",
+        "Regulating water uptake"
+      ],
+      "correctAnswer": "Producing different pigments",
       "reference": "AI-based expansion"
     },
     {
-      "question": "Which cloud service is used for secure key management in Azure?",
+      "question": "Which environmental factor can limit the rate of photosynthesis?",
       "options": [
-        "Azure Key Management",
-        "Azure KeyVault",
-        "Azure Security Center",
-        "Azure AD"
+        "Carbon dioxide concentration",
+        "Temperature",
+        "Light intensity",
+        "All of the above"
       ],
-      "correctAnswer": "Azure KeyVault",
+      "correctAnswer": "All of the above",
       "reference": "AI-based expansion"
     },
     {
-      "question": "Which project involved the use of Azure Functions?",
+      "question": "What is the equation for photosynthesis?",
       "options": [
-        "Azure Cloud Solution",
-        "DevOps IP solution",
-        "Generative AI GitHub bot",
-        "IoT platform for healthcare"
+        "6CO2 + 6H2O + light energy -> C6H12O6 + 6O2",
+        "CO2 + H2O + light energy -> C6H12O6 + O2",
+        "2CO2 + 2H2O + light energy -> C6H12O6 + 2O2",
+        "3CO2 + 3H2O + light energy -> C6H12O6 + 3O2"
       ],
-      "correctAnswer": "IoT platform for healthcare",
-      "reference": "Work Experience section"
+      "correctAnswer": "6CO2 + 6H2O + light energy -> C6H12O6 + 6O2",
+      "reference": "AI-generated"
     },
     {
-      "question": "What is the primary purpose of a DevOps pipeline?",
+      "question": "What is the role of stomata in photosynthesis?",
       "options": [
-        "To manage cloud infrastructure",
-        "To automate the software development lifecycle",
-        "To secure data transmission over networks",
-        "To analyze and optimize database performance"
+        "Gas exchange",
+        "Water regulation",
+        "Light absorption",
+        "Carbon dioxide fixation"
       ],
-      "correctAnswer": "To automate the software development lifecycle",
+      "correctAnswer": "Gas exchange",
       "reference": "AI-based expansion"
+    },
+    {
+      "question": "Which process is the reverse of photosynthesis?",
+      "options": [
+        "Cellular respiration",
+        "Glycolysis",
+        "Fermentation",
+        "Photorespiration"
+      ],
+      "correctAnswer": "Cellular respiration",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "How do C4 plants differ in their photosynthesis process?",
+      "options": [
+        "They use a different type of chlorophyll",
+        "They have a modified Calvin cycle",
+        "They initially fix CO2 into a 4-carbon compound",
+        "They produce glucose directly from sunlight"
+      ],
+      "correctAnswer": "They initially fix CO2 into a 4-carbon compound",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "What is the primary benefit of oxygenic photosynthesis for the Earth's atmosphere?",
+      "options": [
+        "Ozone layer formation",
+        "Climate regulation",
+        "Oxygen production",
+        "Carbon sequestration"
+      ],
+      "correctAnswer": "Oxygen production",
+      "reference": "AI-based expansion"
+    },
+    {
+      "question": "Which factor can affect the efficiency of photosynthesis in aquatic plants?",
+      "options": [
+        "Water depth",
+        "Salinity",
+        "Wave action",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "reference": "AI-based expansion"
+    },
+    {
+      "question": "What is the role of ATP in photosynthesis?",
+      "options": [
+        "Energy storage",
+        "Carbon dioxide transport",
+        "Phosphorylation of enzymes",
+        "Electron carrier"
+      ],
+      "correctAnswer": "Phosphorylation of enzymes",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "Which pigment is involved in non-oxygenic photosynthesis?",
+      "options": [
+        "Bacteriochlorophyll",
+        "Chlorophyll b",
+        "Phycocyanin",
+        "Carotene"
+      ],
+      "correctAnswer": "Bacteriochlorophyll",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "How do CAM plants adapt to arid conditions?",
+      "options": [
+        "By opening stomata at night",
+        "Using a different photosynthetic pathway",
+        "Storing water in specialized cells",
+        "Producing a waxy cuticle"
+      ],
+      "correctAnswer": "By opening stomata at night",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "Which process is essential for the regeneration of RuBisCO?",
+      "options": [
+        "Photorespiration",
+        "Carbon fixation",
+        "Light-dependent reactions",
+        "Calvin cycle"
+      ],
+      "correctAnswer": "Calvin cycle",
+      "reference": "AI-generated"
+    },
+    {
+      "question": "What is the main purpose of photorespiration in plants?",
+      "options": [
+        "To release excess oxygen",
+        "Recycle RuBisCO",
+        "Produce ATP",
+        "Regulate water uptake"
+      ],
+      "correctAnswer": "Recycle RuBisCO",
+      "reference": "AI-generated"
     }
   ]
 }

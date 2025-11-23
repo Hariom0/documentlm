@@ -12,28 +12,36 @@ export const config = {
 export async function POST(req: NextRequest) {
 	try {
 		// Handle File Upload
+
 		const formData = await req.formData();
 		const files = formData.getAll("files") as File[];
+		const inputText = formData.get("text")
 
-		if (!files || files.length === 0) {
+		if ((!files || files.length === 0 ) && !inputText) {
 			return NextResponse.json({ error: "No files uploaded" }, { status: 400 });
 		}
 
-		const uploadDir = path.join(process.cwd(), "public", "uploads");
-		await mkdir(uploadDir, { recursive: true });
+		let uploadDir;
+		let uploadedText;
 
-		for (const file of files) {
-			const buffer = Buffer.from(await file.arrayBuffer());
-			const uniqueName = `${Date.now()}-${file.name}`;
-			const filePath = path.join(uploadDir, uniqueName);
-			await writeFile(filePath, buffer);
+		if(files){
+			uploadDir = path.join(process.cwd(), "public", "uploads");
+			await mkdir(uploadDir, { recursive: true });
+	
+			for (const file of files) {
+				const buffer = Buffer.from(await file.arrayBuffer());
+				const uniqueName = `${Date.now()}-${file.name}`;
+				const filePath = path.join(uploadDir, uniqueName);
+				await writeFile(filePath, buffer);
+			}
+			uploadedText = await extractUploads(uploadDir);
 		}
 
 		// Extract File content
-		const uploadedText = await extractUploads(uploadDir);
+		uploadedText! += inputText;
 
 		// Get Summary Json 
-		const outputJson = await getSummary(uploadedText) 
+		const outputJson = await getSummary(uploadedText!) 
 		
 		return NextResponse.json(
 			{
