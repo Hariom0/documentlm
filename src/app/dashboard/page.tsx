@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FileUpload } from "@/components/ui/FileUpload";
 import Textarea from "@/components/ui/Textarea";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Result from "@/components/ui/Result";
 import ProcessingStages from "@/components/ui/ProcessingStages";
 import { FileText, CheckCircle2, ExternalLink, XCircle, ChevronDown, ChevronUp, Upload, Type } from "lucide-react";
@@ -12,6 +12,7 @@ type InputMode = "files" | "text";
 
 const Dashboard = () => {
 	const router = useRouter();
+	const searchParams = useSearchParams();
 	const [files, setFiles] = useState<File[]>([]);
 	const [textInput, setTextInput] = useState("");
 	const [inputMode, setInputMode] = useState<InputMode>("files");
